@@ -19,14 +19,14 @@ mod tests {
         // literal. If we were to use a variable, the compiler wouldn't be able to
         // catch this at compile time.
         #[allow(overflowing_literals)]
-        let x = { 254 as i8 };
+        let x = { 255 as i8 };
 
         // update the first bit to be -
 
         // You could solve this by using exactly the same expression as above,
         // but that would defeat the purpose of the exercise. Instead, use a genuine
         // `i8` value that is equivalent to `255` when converted from `u8`.
-        let y: i8 = 126;
+        let y: i8 = -1;
 
         assert_eq!(x, y);
     }
