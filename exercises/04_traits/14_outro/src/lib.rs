@@ -8,3 +8,16 @@
 //   It should be possible to print its debug representation.
 //
 // Tests are located in the `tests` folder—pay attention to the visibility of your types and methods.
+use std::ops::Add;
+#[derive(Debug)]
+struct SaturatingU16 {
+    value: u16,
+}
+
+impl Add for SaturatingU16 {
+    type Output = u16;
+
+    fn add(self, rhs: Self) -> Self::Output {
+        self.value + rhs.value
+    }
+}

@@ -37,6 +37,7 @@ impl Ticket {
     pub fn new(title: String, description: String, status: String) -> Ticket {
         let title = Self::check_title(title);
         let description = Self::check_description(description);
+        let status = Self::check_status(status);
 
         Ticket {
             title,
