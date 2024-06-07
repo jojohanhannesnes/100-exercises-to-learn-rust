@@ -8,7 +8,11 @@ impl Shape {
     // TODO: Implement the `radius` method using
     //  either an `if let` or a `let/else`.
     pub fn radius(&self) -> f64 {
-        todo!()
+        match &self {
+            Shape::Circle { radius } => *radius,
+            Shape::Square { border } => panic!("err"),
+            Shape::Rectangle { width, height } => panic!("err"),
+        }
     }
 }
 

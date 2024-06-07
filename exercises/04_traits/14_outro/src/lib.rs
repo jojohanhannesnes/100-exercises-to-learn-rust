@@ -39,7 +39,6 @@ impl From<&u8> for SaturatingU16 {
         (*value).into()
     }
 }
-
 // This trait is important so that other impl trait can add u16 to SaturatingU16
 impl std::ops::Add<u16> for SaturatingU16 {
     type Output = Self;
